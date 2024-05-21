@@ -9,7 +9,7 @@ public class Server {
         
         // Try-with-resources to automatically manage the server socket
         try (ServerSocket serverSocket = new ServerSocket(port)) {
-            System.out.println("Server started. Listening on port " + port);
+            System.out.println("\n\nServer started. Listening on port " + port);
 
             // Infinite loop to keep the server running
             while (true) {
@@ -30,14 +30,14 @@ public class Server {
                     }
                 } catch (IOException e) {
                     // Handle exceptions related to IO and connections
-                    System.out.println("Exception caught when trying to listen on port "
+                    System.out.println("\n\nException caught when trying to listen on port "
                             + port + " or listening for a connection");
                     System.out.println(e.getMessage());
                 }
             }
         } catch (IOException e) {
             // Handle exceptions related to opening the server socket
-            System.out.println("Could not listen on port " + port);
+            System.out.println("\n\nCould not listen on port " + port);
             System.out.println(e.getMessage());
         }
     }
